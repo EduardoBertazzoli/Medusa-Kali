@@ -53,6 +53,9 @@ Explicação:
 * `-M`: módulo (FTP)
 * '-t': ativa a opção multithread que torna mais ágil e rapida a execução do comando.
 
+* obs: Editado a wordlist rockyou.txt para inserir no começo da lista a senha msfadmin apenas para agilizar os testes.
+* vim /usr/share/wordlists/rockyou.txt
+
 Resultado:
 Credenciais descobertas: `msfadmin:msfadmin`
 Acesso validado via `ftp`.
