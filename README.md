@@ -79,6 +79,8 @@ Explicação:
 
 Resultado:
 Login com senha válida foi identificado.
+usuario: admin
+senha: password
 
 3.Password Spraying no SMB com Enum4Linux
 
